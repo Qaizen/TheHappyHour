@@ -76,3 +76,9 @@ goOutButton.addEventListener("click", function() {
     goOutSearch.innerHTML = "";
   }
 });
+
+document.addEventListener('DOMContentLoaded',function(){
+  var mod = document.querySelector('.modal');
+  var instance = M.Modal.init(mod);
+  instance.open();
+})
