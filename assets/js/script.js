@@ -63,6 +63,7 @@ goOutButton.addEventListener("click", function() {
                 City: ${brewery.city}<br>
                 State: ${brewery.state}
               </p>
+            <br>
             `;
           });
   
