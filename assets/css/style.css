@@ -3,8 +3,8 @@
     padding: 0;
 }
 
-body{
-    background-image: url(/assets/images/TheHappyHour.jpg);
+body {
+    background-image: url("../images/TheHappyHour.jpg");
     background-repeat: no-repeat;
     background-size: cover;
 }
