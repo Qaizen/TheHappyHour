@@ -7,10 +7,13 @@ stayInBtn.addEventListener("click", function () {
   fetch("https://www.thecocktaildb.com/api/json/v1/1/random.php")
     .then((response) => response.json())
     .then((data) => {
+      console.log(data);
       var drink = data.drinks[0];
       var name = drink.strDrink;
       var imageUrl = drink.strDrinkThumb;
       var ingredients = [];
+      var instructions = drink.strInstructions;
+
       for (var i = 1; i <= 15; i++) {
         var ingredient = drink[`strIngredient${i}`];
         if (ingredient) {
@@ -29,9 +32,11 @@ stayInBtn.addEventListener("click", function () {
             ${ingredients.map(ingredient => `<li>${ingredient}</li>`).join("")}
           </ul>
         </div>
-      `;
-
+        `;
+      var drinkInstructions = document.getElementById("random-drink-instructions");
+      drinkInstructions.innerHTML = `${instructions}`;
       cocktailContainer.appendChild(cocktailDiv);
+
       card.style.display = "block"; // Show the card
     })
     .catch((error) => {
@@ -50,8 +55,9 @@ document.addEventListener("DOMContentLoaded", function () {
 //Random Brewery API call and append function
 var goOutButton = document.getElementById("go-out-btn");
 var goOutSearch = document.getElementById("brewery-Api");
-
+goOutSearch.style.display = "none";
 goOutButton.addEventListener("click", function () {
+  goOutSearch.style.display = "flex";
   goOutSearch.innerHTML = `
     <input type="text" id="city-input" placeholder="Enter city">
     <button id="search-button">Search</button>
@@ -67,6 +73,7 @@ goOutButton.addEventListener("click", function () {
     fetch(endpoint)
       .then((response) => response.json())
       .then((data) => {
+        console.log(data);
         var resultsDiv = document.createElement("div");
         resultsDiv.id = "results";
 
@@ -82,6 +89,7 @@ goOutButton.addEventListener("click", function () {
           `;
         });
 
+        goOutSearch.style.display = "block";
         goOutSearch.appendChild(resultsDiv);
       })
       .catch((error) => {
@@ -89,3 +97,4 @@ goOutButton.addEventListener("click", function () {
       });
   });
 });
+

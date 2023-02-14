@@ -96,5 +96,8 @@ h1 {
     overflow: auto;
   }
 
+#city-input {
+    border-radius: 10px;
+}
 
 
