@@ -38,6 +38,9 @@ body {
 h1 {
     font-weight: bold;
     text-shadow: 10px 10px black;
+    font-family: 'Shrikhand', cursive;
+    font-size: 120px;
+    color: rgb(238, 191, 52);
 }
 
 #buttons {
