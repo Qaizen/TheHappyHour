@@ -1,6 +1,7 @@
 //Random Cocktail API call and append function
 var stayInBtn = document.getElementById("stay-in-btn");
-var cocktailApiDiv = document.getElementById("cocktail-Api");
+var cocktailContainer = document.getElementById("cocktail-container");
+var card = document.querySelector(".card.small");
 
 stayInBtn.addEventListener("click", function () {
   fetch("https://www.thecocktaildb.com/api/json/v1/1/random.php")
@@ -19,17 +20,25 @@ stayInBtn.addEventListener("click", function () {
 
       var cocktailDiv = document.createElement("div");
       cocktailDiv.innerHTML = `
-      <h3>${name}</h3>
-      <img src="${imageUrl}" alt="${name}" width="100">
-        <p>Ingredients: ${ingredients.join(", ")}</p>
+        <div class="card-image waves-effect waves-block waves-light">
+          <img src="${imageUrl}" alt="${name}">
+        </div>
+        <div class="card-content">
+          <span class="card-title grey-text text-darken-4">${name}</span>
+          <ul>
+            ${ingredients.map(ingredient => `<li>${ingredient}</li>`).join("")}
+          </ul>
+        </div>
       `;
 
-      cocktailApiDiv.appendChild(cocktailDiv);
+      cocktailContainer.appendChild(cocktailDiv);
+      card.style.display = "block"; // Show the card
     })
     .catch((error) => {
       console.error("An error occurred:", error);
     });
 });
+
 
 //modal age restriction
 document.addEventListener("DOMContentLoaded", function () {
