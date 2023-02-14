@@ -3,7 +3,8 @@
     padding: 0;
 }
 
-body {
+
+body{
     background-image: url("../images/TheHappyHour.jpg");
     background-repeat: no-repeat;
     background-size: cover;
@@ -84,3 +85,13 @@ h1 {
     padding-right: 5em;
     border-radius: 20px;
 }
+.card.small {
+    display: none;
+    width: 25em;
+    height: 40em;
+    padding: .5em;
+    overflow: auto;
+  }
+
+
+
