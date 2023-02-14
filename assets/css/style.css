@@ -2,11 +2,13 @@
     margin: 0;
     padding: 0;
 }
-:root{
-    background-image: url(https://cdn2.vectorstock.com/i/1000x1000/20/16/happy-hour-neon-sign-design-template-vector-21392016.jpg);
+
+body{
+    background-image: url(/assets/images/TheHappyHour.jpg);
     background-repeat: no-repeat;
     background-size: cover;
 }
+
 .tabs {
     display: flex;
     justify-content: space-between;
