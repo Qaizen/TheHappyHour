@@ -100,10 +100,16 @@ h1 {
     height: 40em;
     padding: .5em;
     overflow: auto;
+    background-color: #7163df;
   }
 
 #city-input {
     border-radius: 10px;
+    background-color: #4C3EBF;
+}
+
+#brewery-Api {
+    background-color: #7163df;
 }
 
 .modal .modal-footer {
@@ -117,4 +123,8 @@ h1 {
     background-color: #4C3EBF;
     color: white;
     text-align: center;
+}
+
+a {
+    color: whitesmoke;
 }
