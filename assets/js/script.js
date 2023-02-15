@@ -81,8 +81,8 @@ goOutButton.addEventListener("click", function () {
           resultsDiv.innerHTML += `
             <p>
               Name: ${brewery.name}<br>
-              Type: ${brewery.brewery_type}<br>
-              City: ${brewery.city}<br>
+              Website: <a href="${brewery.website_url}">${brewery.website_url}</a><br>
+              Address: ${brewery.street}<br>
               State: ${brewery.state}
             </p>
              <br>
