@@ -3,7 +3,8 @@
     padding: 0;
 }
 
-body {
+
+body{
     background-image: url("../images/TheHappyHour.jpg");
     background-repeat: no-repeat;
     background-size: cover;
@@ -38,6 +39,9 @@ body {
 h1 {
     font-weight: bold;
     text-shadow: 10px 10px black;
+    font-family: 'Shrikhand', cursive;
+    font-size: 120px;
+    color: rgb(238, 191, 52);
 }
 
 #buttons {
@@ -72,6 +76,9 @@ h1 {
 }
 
 #stay-in-btn {
+    background-image: url("../images/StayIn.jpg");
+    background-repeat: no-repeat;
+    background-size:contain;
     padding: 10em;
     padding-left: 5em;
     padding-right: 5em;
@@ -79,8 +86,35 @@ h1 {
 }
 
 #go-out-btn {
+    background-image: url("../images/GoOut.jpg");
+    background-repeat: no-repeat;
+    background-size:contain;
     padding: 10em;
     padding-left: 5em;
     padding-right: 5em;
     border-radius: 20px;
+}
+.card.small {
+    display: none;
+    width: 25em;
+    height: 40em;
+    padding: .5em;
+    overflow: auto;
+  }
+
+#city-input {
+    border-radius: 10px;
+}
+
+.modal .modal-footer {
+    background-color: #4C3EBF;
+    color: white;
+    justify-content: center;
+    text-align: center;
+}
+
+.modal {
+    background-color: #4C3EBF;
+    color: white;
+    text-align: center;
 }
