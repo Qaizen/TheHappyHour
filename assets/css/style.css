@@ -76,6 +76,9 @@ h1 {
 }
 
 #stay-in-btn {
+    background-image: url("../images/StayIn.jpg");
+    background-repeat: no-repeat;
+    background-size:contain;
     padding: 10em;
     padding-left: 5em;
     padding-right: 5em;
@@ -83,6 +86,9 @@ h1 {
 }
 
 #go-out-btn {
+    background-image: url("../images/GoOut.jpg");
+    background-repeat: no-repeat;
+    background-size:contain;
     padding: 10em;
     padding-left: 5em;
     padding-right: 5em;
@@ -100,4 +106,15 @@ h1 {
     border-radius: 10px;
 }
 
+.modal .modal-footer {
+    background-color: #4C3EBF;
+    color: white;
+    justify-content: center;
+    text-align: center;
+}
 
+.modal {
+    background-color: #4C3EBF;
+    color: white;
+    text-align: center;
+}
