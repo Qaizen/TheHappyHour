@@ -5,6 +5,9 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Shrikhand&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="./assets/css/style.css">
 
     <title>The Happy Hour</title>
@@ -29,39 +32,24 @@
 
     </div>
 
-    <!-- <div class="nav-content">
-      <ul class="tabs tabs-transparent">
-        <li id="stay-in" class="tab"><button class="waves-effect waves-light center btn">Stay In</button></li>
-        <li id="go-out" class="tab"><button class="waves-effect waves-light center btn">Go Out</button></li>
-        
-
-      </ul>
-    </div> -->
   </nav>
 </div>
-  <!-- <ul class="sidenav" id="mobile-demo">
-    <li><a href="sass.html">Sass</a></li>
-    <li><a href="badges.html">Components</a></li>
-    <li><a href="collapsible.html">JavaScript</a></li>
-  </ul> -->
 
-  <div class="card large hide">
+
+  <div class="card small">
     <div class="card-image waves-effect waves-block waves-light">
-      <img class="activator" src="images/office.jpg">
+      <img class="activator" id="random-drink-img" src="">
     </div>
     <div class="card-content">
-      <span class="card-title activator grey-text text-darken-4">Card Title<i class="material-icons right">more_vert</i></span>
-      <p><a href="#">This is a link</a></p>
+      <span class="card-title activator grey-text text-darken-4" id="random-drink-name"><i class="material-icons right">Drink Recipe</i></span>
     </div>
     <div class="card-reveal">
-      <span class="card-title grey-text text-darken-4">Card Title<i class="material-icons right">close</i></span>
-      <p>Here is some more information about this product that is only revealed once clicked on.</p>
+      <span class="card-title grey-text text-darken-4"><i class="material-icons right">close</i></span>
+      <p id="random-drink-instructions"></p>
     </div>
+    <div id="cocktail-container"></div>
   </div>
 
-  <div id="cocktail-Api">
-<!-- empty div -->
-  </div>
 
   <div id="brewery-Api">
     <!-- empty div -->

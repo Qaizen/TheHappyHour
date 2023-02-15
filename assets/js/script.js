@@ -1,15 +1,19 @@
 //Random Cocktail API call and append function
 var stayInBtn = document.getElementById("stay-in-btn");
-var cocktailApiDiv = document.getElementById("cocktail-Api");
+var cocktailContainer = document.getElementById("cocktail-container");
+var card = document.querySelector(".card.small");
 
 stayInBtn.addEventListener("click", function () {
   fetch("https://www.thecocktaildb.com/api/json/v1/1/random.php")
     .then((response) => response.json())
     .then((data) => {
+      console.log(data);
       var drink = data.drinks[0];
       var name = drink.strDrink;
       var imageUrl = drink.strDrinkThumb;
       var ingredients = [];
+      var instructions = drink.strInstructions;
+
       for (var i = 1; i <= 15; i++) {
         var ingredient = drink[`strIngredient${i}`];
         if (ingredient) {
@@ -19,17 +23,27 @@ stayInBtn.addEventListener("click", function () {
 
       var cocktailDiv = document.createElement("div");
       cocktailDiv.innerHTML = `
-      <h3>${name}</h3>
-      <img src="${imageUrl}" alt="${name}" width="100">
-        <p>Ingredients: ${ingredients.join(", ")}</p>
-      `;
+        <div class="card-image waves-effect waves-block waves-light">
+          <img src="${imageUrl}" alt="${name}">
+        </div>
+        <div class="card-content">
+          <span class="card-title grey-text text-darken-4">${name}</span>
+          <ul>
+            ${ingredients.map(ingredient => `<li>${ingredient}</li>`).join("")}
+          </ul>
+        </div>
+        `;
+      var drinkInstructions = document.getElementById("random-drink-instructions");
+      drinkInstructions.innerHTML = `${instructions}`;
+      cocktailContainer.appendChild(cocktailDiv);
 
-      cocktailApiDiv.appendChild(cocktailDiv);
+      card.style.display = "block"; // Show the card
     })
     .catch((error) => {
       console.error("An error occurred:", error);
     });
 });
+
 
 //modal age restriction
 document.addEventListener("DOMContentLoaded", function () {
@@ -41,8 +55,9 @@ document.addEventListener("DOMContentLoaded", function () {
 //Random Brewery API call and append function
 var goOutButton = document.getElementById("go-out-btn");
 var goOutSearch = document.getElementById("brewery-Api");
-
+goOutSearch.style.display = "none";
 goOutButton.addEventListener("click", function () {
+  goOutSearch.style.display = "flex";
   goOutSearch.innerHTML = `
     <input type="text" id="city-input" placeholder="Enter city">
     <button id="search-button">Search</button>
@@ -58,6 +73,7 @@ goOutButton.addEventListener("click", function () {
     fetch(endpoint)
       .then((response) => response.json())
       .then((data) => {
+        console.log(data);
         var resultsDiv = document.createElement("div");
         resultsDiv.id = "results";
 
@@ -73,6 +89,7 @@ goOutButton.addEventListener("click", function () {
           `;
         });
 
+        goOutSearch.style.display = "block";
         goOutSearch.appendChild(resultsDiv);
       })
       .catch((error) => {
@@ -80,3 +97,4 @@ goOutButton.addEventListener("click", function () {
       });
   });
 });
+
