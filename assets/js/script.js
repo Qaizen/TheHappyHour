@@ -91,9 +91,18 @@ goOutButton.addEventListener("click", function () {
 
         goOutSearch.style.display = "block";
         goOutSearch.appendChild(resultsDiv);
+
+        // Save city to local storage
+        localStorage.setItem("city", city);
       })
       .catch((error) => {
         console.error("An error occurred:", error);
       });
   });
+
+  // Check if city was previously searched and display it
+  var savedCity = localStorage.getItem("city");
+  if (savedCity) {
+    cityInput.value = savedCity;
+  }
 });
