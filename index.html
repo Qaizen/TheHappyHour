@@ -1,104 +1,108 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Shrikhand&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="./assets/css/style.css">
 
-    <title>The Happy Hour</title>
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Shrikhand&display=swap" rel="stylesheet">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@1000&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="./assets/css/style.css">
+
+  <title>The Happy Hour</title>
 </head>
+
 <body>
 
-  <header class="header">
-        <h1>The Happy Hour</h1>
-    </header>
-    <div id="buttons">
-        <button class="waves-effect waves-light center btn-large indigo darken-4" id="stay-in-btn">Stay In</button>
-        <button class="waves-effect waves-light center btn-large indigo darken-44" id="go-out-btn">Go Out</button>
+  <!-- Modal Structure -->
+  <div class="modal" id="mymodal">
+    <div class="modal-content">
+      <h4>Age Restriction</h4>
+      <p>I verify that I am over 21</p>
     </div>
+    <div class="modal-footer">
+      <a href="#!" class="modal-close btn deep-purple accent-1">Agree</a>
+      <a href="https://www.youtube.com/watch?v=XqZsoesa55w&t=19s"
+        class="modal-close btn deep-purple accent-1">Disagree</a>
+    </div>
+  </div>
+
+  <header class="header">
+    <h1>The Happy Hour</h1>
   </header>
 
-
-    <div class="container hide">
-    <nav class="nav-extended">
-    <div class="nav-wrapper">
-      <a href="#" class="brand-logo center">Logo</a>
-      <a href="#" data-target="mobile-demo" class="sidenav-trigger"><i class="material-icons">menu</i></a>
-
+  <main>
+    <div id="buttons">
+      <button class="waves-effect waves-light center btn-large indigo darken-4" id="stay-in-btn"
+        onclick="this.disabled = true;">
+        <p>Stay In</p>
+      </button>
+      <button class="waves-effect waves-light center btn-large indigo darken-44" id="go-out-btn">
+        <p>Go Out</p>
+      </button>
     </div>
 
-  </nav>
-</div>
-
-
-  <div class="card small">  
-    <div class="card-image waves-effect waves-block waves-light">
-      <img class="activator" id="random-drink-img" src="">
     </div>
-    <div class="card-content">
-      <span class="card-title activator grey-text text-darken-4" id="random-drink-name"><i class="material-icons right">&Rightarrow; Mixing Instructions</i></span>
-    </div>
-    <div class="card-reveal">
-      <span class="card-title grey-text text-darken-4"><i class="material-icons right">close</i></span>
-      <p id="random-drink-instructions"></p>
-    </div>
-    <div id="cocktail-container"></div>
-  </div>
-
-
-  <div id="brewery-Api">
-    <!-- empty div -->
-  </div>
-
- <!-- Modal Structure -->
-<div class="modal" id="mymodal" >
-<div class="modal-content">
-  <h4>Age Restriction</h4>
-  <p>I verify that I am over 21</p>
-</div>
-<div class="modal-footer">
-  <a href="#!" class="modal-close btn deep-purple accent-1">Agree</a>
-  <a href="https://www.youtube.com/watch?v=XqZsoesa55w&t=19s" class="modal-close btn deep-purple accent-1">Disagree</a>
-</div>
-</div>
-<footer class="page-footer deep-purple">
-  <div class="container">
-    <div class="row">
-      <div class="col l6 s12">
-        <h5 class="white-text">The Happy Hour</h5>
-        <p class="grey-text text-lighten-4">Made for drinkers by drinkers.</p>
+    <div class="card small">
+      <div class="card-image waves-effect waves-block waves-light">
+        <img class="activator" id="random-drink-img" src="">
       </div>
-      <div class="col l4 offset-l2 s12">
-        <h5 class="white-text">Developers</h5>
-        <ul>
-          <li><a class="waves-effect waves-light grey-text text-lighten-3 hoverable" href="https://github.com/Qaizen">Steven Nguyen(project developer)</a></li>
-          <br>
-          <li><a class="waves-effect waves-light grey-text text-lighten-3 hoverable" href="https://github.com/PatAmeglio">Patrick Ameglio</a></li>
-          <br>
-          <li><a class="waves-effect waves-light grey-text text-lighten-3 hoverable" href="https://github.com/Cwilson84">Cris Wilson</a></li>
-          <br>
-          <li><a class="waves-effect waves-light grey-text text-lighten-3 hoverable" href="https://github.com/Danny2727">Daniel Edouard</a></li>
-          <br>
-          <li><a class="waves-effect waves-light grey-text text-lighten-3 hoverable" href="https://github.com/jmalave15">Jose Malave</a></li>
-        </ul>
+      <div class="card-content">
+        <span class="card-title activator grey-text text-darken-4" id="random-drink-name"><i
+            class="material-icons right">&Rightarrow; Mixing Instructions</i></span>
       </div>
+      <div class="card-reveal">
+        <span class="card-title grey-text text-darken-4"><i class="material-icons right">close</i></span>
+        <p id="random-drink-instructions"></p>
+      </div>
+      <div id="cocktail-container"></div>
     </div>
-  </div>
-  <div class="footer-copyright">
+
+
+    <div id="brewery-Api">
+      <!-- empty div -->
+    </div>
+  </main>
+
+  <footer class="page-footer deep-purple">
     <div class="container">
-    Brought to you by Open brewery-Api
-    <a class="grey-text text-lighten-4 right hoverable" href="https://www.openbrewerydb.org/">Link</a>
+      <div class="row">
+        <div class="col l6 s12">
+          <h5 class="white-text">The Happy Hour</h5>
+          <p class="grey-text text-lighten-4">Made for drinkers by drinkers.</p>
+        </div>
+        <div class="col l4 offset-l2 s12">
+          <h5 class="white-text">Developers</h5>
+          <ul class="names">
+            <li><a class="waves-effect waves-light grey-text text-lighten-3 hoverable"
+                href="https://github.com/Qaizen">Steven Nguyen(project developer)</a></li>
+            <li><a class="waves-effect waves-light grey-text text-lighten-3 hoverable"
+                href="https://github.com/PatAmeglio">Patrick Ameglio</a></li>
+            <li><a class="waves-effect waves-light grey-text text-lighten-3 hoverable"
+                href="https://github.com/Cwilson84">Cris Wilson</a></li>
+            <li><a class="waves-effect waves-light grey-text text-lighten-3 hoverable"
+                href="https://github.com/Danny2727">Daniel Edouard</a></li>
+            <li><a class="waves-effect waves-light grey-text text-lighten-3 hoverable"
+                href="https://github.com/jmalave15">Jose Malave</a></li>
+          </ul>
+        </div>
+      </div>
     </div>
-  </div>
-</footer>
+    <div class="footer-copyright">
+      <div class="container">
+        Brought to you by Open brewery-Api
+        <a class="grey-text text-lighten-4 right hoverable" href="https://www.openbrewerydb.org/">Link</a>
+      </div>
+    </div>
+  </footer>
 
-<script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
-<script src="assets/js/script.js"></script>   
-
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+  <script src="assets/js/script.js"></script>
 </body>
+
 </html>

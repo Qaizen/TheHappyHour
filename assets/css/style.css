@@ -1,26 +1,19 @@
-* {
-    margin: 0;
-    padding: 0;
-}
-
-.tabs {
+body {
     display: flex;
-    justify-content: space-between;
-
-
+    min-height: 100vh;
+    flex-direction: column;
+    justify-content: flex-end;
+    background-image: url("../images/TheHappyHour.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
 }
 
-.card {
-    width: 50vw;
-    margin-left: auto;
-    margin-right: auto;
-    margin-top: 2em;
-    
+main {
+    flex: 1 0 auto;
+}
 
-} 
-
-.hide {
-    display: none;
+a {
+    color: whitesmoke;
 }
 
 .header {
@@ -35,6 +28,27 @@ h1 {
     font-family: 'Shrikhand', cursive;
     font-size: 120px;
     color: rgb(238, 191, 52);
+}
+
+.tabs {
+    display: flex;
+    justify-content: space-between;
+}
+
+.card {
+    width: 50vw;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 2em;
+}
+
+.card.small {
+    display: none;
+    width: 25em;
+    height: 40em;
+    padding: .5em;
+    overflow: auto;
+    background-color: #7163df;
 }
 
 #buttons {
@@ -53,7 +67,6 @@ h1 {
     padding: .5em;
     flex-direction: column;
     background-color: blanchedalmond;
-
 }
 
 #brewery-Api {
@@ -71,30 +84,34 @@ h1 {
 #stay-in-btn {
     background-image: url("../images/StayIn.jpg");
     background-repeat: no-repeat;
-    background-size:contain;
+    background-size: cover;
     padding: 10em;
-    padding-left: 5em;
-    padding-right: 5em;
     border-radius: 20px;
+    font-family: 'Nunito', sans-serif;
+    margin-bottom: 300px;
 }
 
 #go-out-btn {
     background-image: url("../images/GoOut.jpg");
     background-repeat: no-repeat;
-    background-size:contain;
+    background-size: cover;
     padding: 10em;
-    padding-left: 5em;
-    padding-right: 5em;
     border-radius: 20px;
+    font-family: 'Nunito', sans-serif;
+    margin-bottom: 300px;
 }
-.card.small {
-    display: none;
-    width: 25em;
-    height: 40em;
-    padding: .5em;
-    overflow: auto;
-    background-color: #7163df;
-  }
+
+#stay-in-btn p {
+    font-size: 2em;
+    color: rgb(238, 191, 52);
+    text-shadow: 5px 5px 10px black;
+}
+
+#go-out-btn p {
+    font-size: 2em;
+    color: rgb(238, 191, 52);
+    text-shadow: 5px 5px 10px black;
+}
 
 #city-input {
     border-radius: 10px;
@@ -118,21 +135,26 @@ h1 {
     text-align: center;
 }
 
-body {
-    display: flex;
-    min-height: 100vh;
-    flex-direction: column;
-    justify-content: flex-end;
-    background-image: url("../images/TheHappyHour.jpg");
-    background-repeat: no-repeat;
-    background-size: cover;
-  }
-
-  main {
-    flex: 1 0 auto;
-  }
-  
-a {
-    color: whitesmoke;
+footer {
+    margin-top: 150px;
 }
 
+.names {
+    padding-bottom: .5em;
+}
+
+#random-cocktail {
+    font-family: 'Nunito', sans-serif;
+}
+
+.ingredients {
+    font-weight: bold;
+}
+
+.brewerylist {
+    font-weight: bold;
+}
+
+#brewery-name {
+    font-family: 'Nunito', sans-serif;
+}
