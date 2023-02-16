@@ -3,13 +3,6 @@
     padding: 0;
 }
 
-
-body{
-    background-image: url("../images/TheHappyHour.jpg");
-    background-repeat: no-repeat;
-    background-size: cover;
-}
-
 .tabs {
     display: flex;
     justify-content: space-between;
@@ -125,6 +118,21 @@ h1 {
     text-align: center;
 }
 
+body {
+    display: flex;
+    min-height: 100vh;
+    flex-direction: column;
+    justify-content: flex-end;
+    background-image: url("../images/TheHappyHour.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+
+  main {
+    flex: 1 0 auto;
+  }
+  
 a {
     color: whitesmoke;
 }
+
