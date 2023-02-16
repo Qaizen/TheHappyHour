@@ -1,3 +1,10 @@
+//modal age restriction
+document.addEventListener("DOMContentLoaded", function () {
+  var mod = document.querySelector(".modal");
+  var instance = M.Modal.init(mod);
+  instance.open();
+});
+
 //Random Cocktail API call and append function
 var stayInBtn = document.getElementById("stay-in-btn");
 var cocktailContainer = document.getElementById("cocktail-container");
@@ -27,9 +34,9 @@ stayInBtn.addEventListener("click", function () {
           <img src="${imageUrl}" alt="${name}">
         </div>
         <div class="card-content">
-          <span class="card-title grey-text text-darken-4">${name}</span>
+          <span class="card-title grey-text text-darken-4" id=random-cocktail>${name}</span>
           <ul>
-            ${ingredients.map(ingredient => `<li>${ingredient}</li>`).join("")}
+            ${ingredients.map(ingredient => `<li class=ingredients>${ingredient}</li>`).join("")}
           </ul>
         </div>
         `;
@@ -44,13 +51,6 @@ stayInBtn.addEventListener("click", function () {
     });
 });
 
-
-//modal age restriction
-document.addEventListener("DOMContentLoaded", function () {
-  var mod = document.querySelector(".modal");
-  var instance = M.Modal.init(mod);
-  instance.open();
-});
 
 //Random Brewery API call and append function
 var goOutButton = document.getElementById("go-out-btn");
@@ -79,8 +79,8 @@ goOutButton.addEventListener("click", function () {
 
         data.forEach(function (brewery) {
           resultsDiv.innerHTML += `
-            <p>
-              Name: ${brewery.name}<br>
+            <p class=brewerylist>
+              Name:<span id=brewery-name> ${brewery.name}</span><br>
               Website: <a href="${brewery.website_url}">${brewery.website_url}</a><br>
               Address: ${brewery.street}<br>
               State: ${brewery.state}
@@ -97,4 +97,3 @@ goOutButton.addEventListener("click", function () {
       });
   });
 });
-
