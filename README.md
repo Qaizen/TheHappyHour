@@ -27,12 +27,14 @@
 
 ## Link to live website
 
-[link](https://qaizen.github.io/Code-Quiz/)
+[link](https://qaizen.github.io/TheHappyHour/)
 
 ## Link to github repository
 
-[link](https://github.com/Qaizen/Code-Quiz)
+[link](https://github.com/Qaizen/TheHappyHour)
 
-## PW generator web app screenshot
+## The Happy Hour screenshot
 
-![Screenshot](./assets/images/CodeQuiz1.jpg)
+![Screenshot](./assets/images/Screenshot1.png)
+![Screenshot](./assets/images/Screenshot2.png)
+
