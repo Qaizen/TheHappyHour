@@ -3,13 +3,6 @@
     padding: 0;
 }
 
-
-body{
-    background-image: url("../images/TheHappyHour.jpg");
-    background-repeat: no-repeat;
-    background-size: cover;
-}
-
 .tabs {
     display: flex;
     justify-content: space-between;
@@ -100,10 +93,16 @@ h1 {
     height: 40em;
     padding: .5em;
     overflow: auto;
+    background-color: #7163df;
   }
 
 #city-input {
     border-radius: 10px;
+    background-color: #4C3EBF;
+}
+
+#brewery-Api {
+    background-color: #7163df;
 }
 
 .modal .modal-footer {
@@ -124,8 +123,16 @@ body {
     min-height: 100vh;
     flex-direction: column;
     justify-content: flex-end;
+    background-image: url("../images/TheHappyHour.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
   }
 
   main {
     flex: 1 0 auto;
   }
+  
+a {
+    color: whitesmoke;
+}
+
