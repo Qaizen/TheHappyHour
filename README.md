@@ -2,20 +2,28 @@
 
 ## Description
 
-User Story 
+- A web browser created for drinking enthusiast. Whether you are looking drinks you can make at home or a brewery in your local area, we can help you with all your drinking needs.
 
 
 ## Installation
 
-N/A
+- Clone the repo
+- git init
+- git pull 
+- Open up the code in VS Code
+
 
 ## Usage
 
-
+- Use the web browser to broaden your drinking horizons wiht new cocktails you can make at home or venture out and about in your area to discover a brewery and what it has to offer.
 
 ## Credits
 
-NA
+- Materilaize Framework 
+- https://www.openbrewerydb.org/ (brewery api)
+- https://www.thecocktaildb.com/api.php  (cocktail api) 
+
+
 
 ## Link to live website
 
