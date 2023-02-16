@@ -10,7 +10,7 @@
 - Clone the repo
 - git init
 - git pull 
-- Open in VS Code
+- Open up the code in VS Code
 
 
 ## Usage
